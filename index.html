@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday!</title>
+    <link rel="stylesheet" href="index-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <style>
+        /* Add CSS to center the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .choice-btn {
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- Background balloons code -->
+    </div>
+    <div class="container">
+        <!-- Start with an empty p tag, the content will be added by JavaScript -->
+        <p id="birthdayMessage"></p>
+        <div class="button-container">
+            <button id="startBtn" onclick="startAdventure()" style="display:none;">let's start your adventure</button>
+        </div>
+    </div>
+
+    <script src="js/dynamic-image.js"></script>
+    <script src="js/index-scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

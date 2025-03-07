@@ -1,0 +1,20 @@
+/* ...existing code... */
+
+button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    /* Add any other button styles you have */
+}
+
+/* If you have specific classes for buttons, ensure they also have these properties */
+.continue-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    /* Add any other specific styles for continue buttons */
+}
+
+/* ...existing code... */
