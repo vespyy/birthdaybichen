@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heartfelt Letter</title>
     <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
@@ -15,7 +16,11 @@
     <div id="blackout" class="blackout"></div>
 
     <!-- Letter Content -->
-    <div id="letter"></div>
+    <div class="special-letter-container">
+        <div class="special-letter-content">
+            <div id="letter"></div>
+        </div>
+    </div>
 
     <script src="js/dynamic-image.js"></script>
     <script src="js/special-letter-scripts.js"></script>
@@ -24,7 +29,6 @@
     <div class="letter-buttons" id="letter-buttons-container">
         <button class="choice-btn" onclick="goTo('index.html')">restart adventure</button>
     </div>
-
 </body>
 </html>
 

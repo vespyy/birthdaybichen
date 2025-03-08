@@ -57,6 +57,13 @@ if (window.location.pathname.includes("special-letter.html")) {
         
         and one last time,
         happy birthday, bichen!
+
+
+
+
+
+
+        
     `;
 
     let currentLetterIndex = 0;
@@ -71,7 +78,10 @@ if (window.location.pathname.includes("special-letter.html")) {
             setTimeout(animateLetter, 50); // Adjust the speed of the typing effect
         } else {
             // Once the letter finishes typing, fade in the buttons container
-            buttonsContainer.style.opacity = 1; // Show the button container
+            buttonsContainer.style.display = 'block'; // Ensure the button container is displayed
+            setTimeout(() => {
+                buttonsContainer.style.opacity = 1; // Show the button container with a smooth transition
+            }, 100); // Slight delay to ensure display change is applied
         }
     }
 
@@ -114,6 +124,35 @@ function triggerConfetti() {
         }, 600); // Reset after animation duration
     });
 }
+
+// Function to navigate to a different page
+function goTo(page) {
+    window.location.href = page;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const letterContent = document.getElementById("letter");
+    const restartButton = document.getElementById("letter-buttons-container");
+
+    // Function to scroll the letter content
+    function scrollLetter() {
+        let scrollAmount = 0;
+        const scrollInterval = setInterval(function() {
+            letterContent.scrollTop += 1;
+            scrollAmount += 1;
+            if (scrollAmount >= letterContent.scrollHeight - letterContent.clientHeight) {
+                clearInterval(scrollInterval);
+                restartButton.style.display = 'block'; // Ensure the button container is displayed
+                setTimeout(() => {
+                    restartButton.style.opacity = 1; // Show the button container with a smooth transition
+                }, 100); // Slight delay to ensure display change is applied
+            }
+        }, 50); // Adjust the speed as needed
+    }
+
+    // Start scrolling after a short delay
+    setTimeout(scrollLetter, 1000);
+});
 
 
 
